@@ -61,6 +61,15 @@ body {
     opacity: 0.7;
     transition: all 100ms ease-in-out;
   }
+  @media only screen and (max-width: 800px) {
+    .header-menu {
+      display: none;
+    }
+    .container {
+      max-width: 550px;
+      margin: 0 auto;
+    }
+  }
 .block {
   background-color: rgba(41, 109, 206, 1);
   height: 513px;
@@ -169,6 +178,33 @@ a {
   margin-left: 5px;
   margin-top: 5px;
 }
+@media only screen and (max-width: 800px) {
+  .container {
+    display: flex;
+
+  }
+  .text {
+      h1 {
+      font-size: 30px;
+      line-height: 33px;
+      margin-top: 100px;
+    }
+    h3 {
+      font-size: 18px;
+      margin-top: -20px;
+    }
+    .bttn {
+      width: 159px;
+      height: 44px;
+      font-size: 12px;
+      line-height: 14px;
+      font-family: Sarabun;
+    }
+  }
+  .karpachoff {
+    display: none;
+  }
+}
 .golowna {
   margin: 20px 10px 0px 10px;
 }
@@ -197,11 +233,10 @@ a:hover {
   .box {
     .container {
       margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-  .text4 {
-    font-size: 18px;
-    line-height: 21.92px;
-  }
 }
 .box {
   max-width: 1600px;
@@ -218,12 +253,10 @@ a:hover {
   line-height: 21.92px;
   margin-left: 10px;
   margin-top: 40px;
- 
-}
+ }
 .btn {
   width: 227px;
   height: 44px;
-  margin: 30px 0px 30px 700px;
   font-size: 14px;
   line-height: 17px;
   color: rgba(247, 128, 0, 1);
@@ -236,6 +269,36 @@ a:hover {
 .btn:hover {
   background-color: rgba(41, 109, 206, 1);
   transition: all 500ms;
+}
+@media only screen and (max-width: 800px) {
+  .box {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+}
+.box {
+  max-width: 800px;
+}
+.line3 {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.text4 {
+  font-size: 14px;
+  font-weight: 500px;
+  line-height: 17px;
+  display: flex;
+ 
+}
+.btn {
+  width: 227px;
+  height: 44px;
+  font-size: 14px;
+  line-height: 17px;
+}
 }
 .content {
   .container {
@@ -288,6 +351,49 @@ a:hover {
 blue2 {
   width: 87px;
   height: 9px;
+}
+@media only screen and (max-width: 800px) {
+  .content.container {
+    display: flex;
+    flex-direction: row;
+  }
+  .container {
+    .golowna {
+    display: none;
+    }
+  }
+  .numb {
+    font-size: 44px;
+    color: rgba(225, 225, 225, 1);
+    font-weight: 500;
+    padding: 10px 25px 10px 0px;
+  }
+  .age-child {
+ }
+  .modul-text {
+    max-width: 400px;
+    height: 500px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .data {
+    font-size: 12px;
+    font-weight: 400px;
+  }
+  .data2 {
+    font-size: 12px;
+    font-weight: 400px;
+  }
+.blue {
+ width: 61px ;
+ height: 15px;
+ display: none;
+}
+blue2 {
+  width: 47px;
+  height: 9px;
+  display: none;
+}
 }
 footer {
   background-color: rgba(41, 109, 206, 1);
