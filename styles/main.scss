@@ -76,6 +76,7 @@ body {
 }
 .container {
   display: flex;
+  justify-content: space-between;
 }
 .text {
     h1 {
@@ -124,7 +125,7 @@ a {
 .karpachoff {
   max-width: 339px;
   max-height: 479px;
-  margin: 33px 0px 0px 300px;
+  margin-top: 33px;;
 }
 .text {
   display: flex;
@@ -208,23 +209,28 @@ a {
 .golowna {
   margin: 20px 10px 0px 10px;
 }
+.container01 {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .golowna a {
   text-decoration: none;
   color: rgba(151, 159, 173, 1);
   font-size: 16px;
   line-height: 19.49px;
   color: rgba(151, 159, 173, 1);
+  padding-top: 20px;
 }
 a:hover {
   color: rgba(50, 50, 50, 1);
   font-weight: 500;
   transition: all 50ms;
 }
-.container {
+.container01 {
   .line {
     font-weight: 1px;
     color: rgba(151, 159, 173, 1);
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .line2 {
     color: rgb(28, 85, 184);
