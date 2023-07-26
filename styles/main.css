@@ -2,36 +2,56 @@ body {
   max-width: 1600px;
   font-family: Roboto;
 }
+@media only screen and (max-width: 992px) {
+  body {
+    max-width: 992px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 750px;
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 500px;
+    padding: 0 5px;
+  }
+}
 
 .header {
   background-color: #ffffff;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.08);
   height: 72px;
 }
-
-.container {
+.header .container {
   max-width: 1110px;
   margin: 0 auto;
-}
-
-.header .container {
-  height: inherit;
+  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.menu {
+.header .menu {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 0;
 }
-
-.menu li {
+.header .menu li {
   display: inline-block;
 }
-
-.menu li a {
+.header a {
   display: inline-block;
   text-decoration: none;
   color: rgb(34, 43, 58);
@@ -40,21 +60,29 @@ body {
   font-weight: 800;
   padding: 10px;
 }
-
-.menu li a:hover {
+@media only screen and (max-width: 992px) {
+  .header a {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+.header .menu li a:hover {
   font-size: 16px;
   line-height: 19.49px;
   font-weight: 800;
   opacity: 0.7;
   transition: all 100ms ease-in-out;
 }
-
-.header-menu {
+.header .header-menu {
   display: flex;
   flex-flow: row nowrap;
 }
-
-.enter {
+@media only screen and (max-width: 768px) {
+  .header .header-menu {
+    display: none;
+  }
+}
+.header .enter {
   margin-left: 20px;
   padding: 25px;
   font-size: 16px;
@@ -62,8 +90,14 @@ body {
   line-height: 19.49px;
   font-weight: 800;
 }
-
-.enter:hover {
+@media only screen and (max-width: 992px) {
+  .header .enter {
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 20px;
+  }
+}
+.header .enter:hover {
   font-size: 16px;
   line-height: 19.49px;
   font-weight: 800;
@@ -71,37 +105,48 @@ body {
   transition: all 100ms ease-in-out;
 }
 
-@media only screen and (max-width: 800px) {
-  .header-menu {
-    display: none;
-  }
-  .container {
-    max-width: 550px;
-    margin: 0 auto;
-  }
-}
 .block {
   background-color: rgb(41, 109, 206);
   height: 513px;
 }
-
-.container {
+.block .container {
   display: flex;
   justify-content: space-between;
 }
-
-.text h1 {
+.block .text h1 {
   font-size: 38px;
   line-height: 53px;
   color: #ffffff;
   margin-top: 100px;
 }
-.text h3 {
+@media only screen and (max-width: 992px) {
+  .block .text h1 {
+    font-size: 35px;
+    line-height: 43px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .block .text h1 {
+    font-size: 33px;
+    line-height: 30px;
+  }
+}
+.block .text h3 {
   font-size: 24px;
   color: rgb(255, 138, 0);
   margin-top: -20px;
 }
-.text .bttn {
+@media only screen and (max-width: 992px) {
+  .block .text h3 {
+    font-size: 21px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .block .text h3 {
+    font-size: 18px;
+  }
+}
+.block .text .bttn {
   width: 209px;
   height: 44px;
   border: 2px solid rgb(255, 255, 255);
@@ -116,47 +161,70 @@ body {
   justify-content: center;
   align-items: center;
 }
-.text .bttn:hover {
+@media only screen and (max-width: 768px) {
+  .block .text .bttn {
+    width: 159px;
+    height: 44px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.block .text .bttn:hover {
   color: #000000;
   background-color: #ffffff;
   transition: all 500ms;
 }
-
-.bttn {
+.block .bttn {
   position: relative;
 }
-
-.buy {
+.block .buy {
   position: absolute;
   bottom: -30px;
   left: 190px;
 }
-
-a {
+@media only screen and (max-width: 992px) {
+  .block .buy {
+    left: 150px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .block .buy {
+    left: 120px;
+  }
+}
+.block a {
   text-decoration: none;
 }
-
-.karpachoff {
+.block .karpachoff {
   max-width: 339px;
   max-height: 479px;
   margin-top: 33px;
 }
-
-.text {
+@media only screen and (max-width: 992px) {
+  .block .karpachoff {
+    max-width: 280px;
+    max-height: 379px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .block .karpachoff {
+    display: none;
+  }
+}
+.block .text {
   display: flex;
   flex-direction: column;
 }
-
-.text .line {
+.block .text .line {
   width: 468px;
   height: 15px;
   border-radius: 3px;
   border: 1px;
   background-color: rgb(243, 243, 243);
-  margin-top: 100px;
+  margin-top: 50px;
   padding-top: 1px;
 }
-.text .line2 {
+.block .text .line2 {
   width: 259px;
   height: 9px;
   border-radius: 3px;
@@ -165,72 +233,52 @@ a {
   margin-top: 1px;
   padding-bottom: 2px;
 }
-
-.temy {
+.block .temy {
   display: flex;
 }
-
-.number {
+.block .number {
   font-size: 38px;
   color: #ffffff;
   font-weight: bold;
 }
-
-.text2 {
+.block .text2 {
   font-size: 14px;
   color: #ffffff;
   margin-left: 5px;
   margin-top: 5px;
 }
-
-.number2 {
+.block .number2 {
   font-size: 38px;
   color: #ffffff;
   font-weight: bold;
   margin-left: 160px;
 }
-
-.text3 {
+.block .text3 {
   font-size: 14px;
   color: #ffffff;
   margin-left: 5px;
   margin-top: 5px;
 }
 
-@media only screen and (max-width: 800px) {
-  .container {
-    display: flex;
-  }
-  .text h1 {
-    font-size: 30px;
-    line-height: 33px;
-    margin-top: 100px;
-  }
-  .text h3 {
-    font-size: 18px;
-    margin-top: -20px;
-  }
-  .text .bttn {
-    width: 159px;
-    height: 44px;
-    font-size: 12px;
-    line-height: 14px;
-    font-family: Sarabun;
-  }
-  .karpachoff {
-    display: none;
-  }
-}
-.golowna {
-  margin: 20px 10px 0px 10px;
-}
-
 .container01 {
   max-width: 1100px;
   margin: 0 auto;
+  margin-top: 10px;
 }
-
-.golowna a {
+@media only screen and (max-width: 992px) {
+  .container01 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container01 {
+    display: none;
+  }
+}
+.container01 .golowna {
+  margin: 20px 10px 0px 10px;
+}
+.container01 .golowna a {
   text-decoration: none;
   color: rgb(151, 159, 173);
   font-size: 16px;
@@ -238,49 +286,92 @@ a {
   color: rgb(151, 159, 173);
   padding-top: 20px;
 }
-
-a:hover {
+.container01 .golowna a:hover {
   color: rgb(50, 50, 50);
   font-weight: 500;
   transition: all 50ms;
 }
 
-.container01 .line {
+.line {
   font-weight: 1px;
   color: rgb(151, 159, 173);
-  margin-top: 10px;
+  margin-top: -15px;
 }
-.container01 .line2 {
+
+.line2 {
   color: rgb(28, 85, 184);
 }
 
-.box .container {
+.box {
+  align-items: center;
+  max-width: 1600px;
+  height: 99px;
+  background-color: rgb(250, 250, 250);
+}
+@media only screen and (max-width: 768px) {
+  .box {
+    align-content: center;
+    height: 143px;
+  }
+}
+
+.container {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.box {
-  max-width: 1600px;
-  height: 99px;
-  background-color: rgb(250, 250, 250);
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 0;
+  }
 }
-
-.line3 {
+.container .text-line {
+  display: flex;
+  flex-direction: row;
   color: rgb(34, 43, 58);
-  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
 }
-
-.text4 {
+@media only screen and (max-width: 768px) {
+  .container .text-line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.container .text-line .line3 {
+  margin-top: 40px;
+}
+@media only screen and (max-width: 992px) {
+  .container .text-line .line3 {
+    margin-top: 38px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container .text-line .line3 {
+    margin-top: 15px;
+  }
+}
+.container .text4 {
   font-size: 18px;
   font-weight: 500px;
   line-height: 21.92px;
   margin-left: 10px;
   margin-top: 40px;
 }
-
-.btn {
+@media only screen and (max-width: 768px) {
+  .container .text4 {
+    margin-top: 15px;
+  }
+}
+.container .btn {
   width: 227px;
   height: 44px;
   font-size: 14px;
@@ -291,47 +382,39 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 }
-
-.btn:hover {
-  background-color: rgb(41, 109, 206);
-  transition: all 500ms;
-}
-
-@media only screen and (max-width: 800px) {
-  .box .container {
-    display: flex;
-    flex-direction: column;
-  }
-  .box {
-    max-width: 800px;
-  }
-  .line3 {
-    margin-top: 5px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .text4 {
-    font-size: 14px;
-    font-weight: 500px;
-    line-height: 17px;
-    display: flex;
-  }
-  .btn {
-    width: 227px;
+@media only screen and (max-width: 768px) {
+  .container .btn {
+    width: 100%;
     height: 44px;
     font-size: 14px;
     line-height: 17px;
   }
 }
+.container .btn:hover {
+  background-color: rgb(41, 109, 206);
+  transition: all 500ms;
+}
+
 .content .container {
-  height: 203px;
+  min-height: 203px;
   display: flex;
   justify-content: center;
   border: 1px solid rgb(243, 243, 243);
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.03);
-  margin-bottom: 20px;
+}
+@media only screen and (max-width: 992px) {
+  .content .container {
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content .container {
+    height: 328px;
+    display: grid;
+    grid-template-areas: "numb" " modul" "modul-text";
+  }
 }
 .content .numb {
   font-size: 64px;
@@ -339,18 +422,50 @@ a:hover {
   font-weight: 700;
   padding: 30px 50px 30px 0px;
 }
-.content h3 {
-  color: rgb(16, 146, 203);
+@media only screen and (max-width: 992px) {
+  .content .numb {
+    font-size: 55px;
+    grid-area: numb;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content .numb {
+    font-size: 40px;
+    grid-area: numb;
+  }
 }
 .content .age-child {
   font-size: 16px;
   color: rgb(151, 159, 173);
 }
+@media only screen and (max-width: 992px) {
+  .content .age-child {
+    grid-area: age-child;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content .age-child {
+    grid-area: age-child;
+  }
+}
 .content .modul-text {
   max-width: 799px;
+  height: 328px;
   font-size: 16px;
   color: rgb(105, 105, 105);
   line-height: 27.78px;
+}
+@media only screen and (max-width: 992px) {
+  .content .modul-text {
+    grid-area: modul-text;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content .modul-text {
+    height: 100%;
+    font-size: 14px;
+    grid-area: modul-text;
+  }
 }
 .content .data {
   color: rgb(0, 0, 0);
@@ -360,96 +475,66 @@ a:hover {
   color: rgb(254, 137, 7);
   font-weight: bold;
 }
-
-.modul h3 a {
+.content .modul h3 a {
   color: rgb(16, 146, 203);
+  font-size: 24px;
 }
-
-.modul h3 a:hover {
+@media only screen and (max-width: 992px) {
+  .content .modul h3 a {
+    font-size: 22px;
+    grid-area: modul;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content .modul h3 a {
+    font-size: 19px;
+    grid-area: modul;
+  }
+}
+.content .modul h3 a:hover {
   color: rgb(29, 183, 37);
   transition: all 50ms;
 }
-
-.blue {
+.content .blue {
   width: 121px;
   height: 15px;
 }
-
-blue2 {
+.content .blue2 {
   width: 87px;
   height: 9px;
 }
 
-@media only screen and (max-width: 800px) {
-  .content.container {
-    display: flex;
-    flex-direction: row;
-  }
-  .container .golowna {
-    display: none;
-  }
-  .numb {
-    font-size: 44px;
-    color: rgb(225, 225, 225);
-    font-weight: 500;
-    padding: 10px 25px 10px 0px;
-  }
-  .modul-text {
-    max-width: 400px;
-    height: 500px;
-    font-size: 12px;
-    line-height: 20px;
-  }
-  .data {
-    font-size: 12px;
-    font-weight: 400px;
-  }
-  .data2 {
-    font-size: 12px;
-    font-weight: 400px;
-  }
-  .blue {
-    width: 61px;
-    height: 15px;
-    display: none;
-  }
-  blue2 {
-    width: 47px;
-    height: 9px;
-    display: none;
-  }
-}
 footer {
   background-color: rgb(41, 109, 206);
   height: 350px;
 }
-
-.box1 .container {
+footer .box01 .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 70px;
+  align-items: flex-start;
+  padding-top: 30px;
 }
-.box1 .online {
-  margin-top: 30px;
+@media only screen and (max-width: 768px) {
+  footer .box01 .online {
+    display: none;
+  }
 }
-.box1 .school {
+@media only screen and (max-width: 768px) {
+  footer .box01 .online2 {
+    display: none;
+  }
+}
+footer .box01 .school {
   font-size: 24px;
   color: rgb(255, 255, 255);
   line-height: 29.23px;
 }
-.box1 a {
+footer .box01 a {
   color: rgb(255, 255, 255);
   font-size: 16px;
   line-height: 19.49px;
 }
-.box1 .white-line {
+footer .box01 .white-line {
   padding-bottom: 10px;
-}
-
-.box2 {
-  max-width: 1600px;
-  height: 47px;
-  background-color: rgb(34, 43, 58);
-  margin-top: 0px;
 }/*# sourceMappingURL=main.css.map */
