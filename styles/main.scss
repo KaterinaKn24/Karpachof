@@ -30,14 +30,18 @@ body {
   height: 72px;
 
     .container {
-      max-width: 1110px;
-      margin: 0 auto;
+
       height: 72px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-     }
 
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+     }
     .menu {
       list-style-type: none;
       padding-left: 0;
@@ -97,8 +101,8 @@ body {
     opacity: 0.7;
     transition: all 100ms ease-in-out;
   }
-
 }
+
 .block {
   background-color: rgba(41, 109, 206, 1);
   height: 513px;
@@ -152,6 +156,21 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
+
+      .buy {
+        position: absolute;
+        bottom: -30px;
+        left: 190px;
+    
+        @media only screen and ( max-width: 992px) {
+          right: 50px;
+        }
+    
+        @media only screen and ( max-width: 768px) {
+          left: 140px;  
+        }
+      }
 
       @media only screen and (max-width: 768px) {
         width: 159px;
@@ -166,22 +185,7 @@ body {
       transition: all 500ms;
   }
 }
-  .bttn {
-    position: relative;
-  }
-  .buy {
-    position: absolute;
-    bottom: -30px;
-    left: 190px;
 
-    @media only screen and ( max-width: 992px) {
-      left: 150px;
-    }
-
-    @media only screen and ( max-width: 768px) {
-      left: 120px;  
-    }
-  }
   a {
     text-decoration: none;
   }
@@ -317,7 +321,8 @@ body {
         flex-direction: column;
         align-content: center;
         justify-content: space-between;
-        margin-top: 0;
+        margin-top: 20px;
+      
       }
 
   .text-line {
@@ -422,6 +427,7 @@ body {
         grid-area: numb;
       }
   }
+
   .age-child {
     font-size: 16px;
     color:rgba(151, 159, 173, 1);
@@ -435,19 +441,21 @@ body {
   }
   .modul-text {
     max-width: 799px;
-    height: 328px;
+    height: 203px;
     font-size: 16px;
     color: rgba(105, 105, 105, 1);
     line-height: 27.78px;
 
     @media only screen and (max-width: 992px) {
       grid-area: modul-text;
+      height: 268px;
     }
 
       @media only screen and (max-width: 768px) {
-        height: 100%;
+        height: 328px;
         font-size: 14px;
         grid-area: modul-text;
+        padding-bottom: 15px;
       }
   }
   .data {
@@ -476,14 +484,6 @@ body {
   color: rgb(29, 183, 37);
   transition: all 50ms;
 }
-.blue {
- width: 121px ;
- height: 15px;
-}
-.blue2 {
-  width: 87px;
-  height: 9px;
-}
 }
 
 footer {
@@ -511,7 +511,7 @@ footer {
     .online2 {
 
       @media only screen and (max-width: 768px) {
-        display: none;
+    
       }
 
     }
